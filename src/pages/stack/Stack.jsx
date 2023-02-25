@@ -10,7 +10,12 @@ const Stack = () => {
   return (
     <div className="wrapper">
       <div className="stack">
-        <Typography variant="h1" className="stack__title">
+        <Typography
+          variant="h1"
+          fontSize="50px"
+          fontWeight="800"
+          className="stack__title"
+        >
           {t("stack")}
         </Typography>
         <div className="stack__block">

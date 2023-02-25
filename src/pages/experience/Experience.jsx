@@ -92,7 +92,12 @@ const Experience = () => {
   return (
     <div className="wrapper">
       <div className="experience">
-        <Typography variant="h1" className="experience__title">
+        <Typography
+          variant="h1"
+          fontSize="50px"
+          fontWeight="800"
+          className="experience__title"
+        >
           {t("experience")}
         </Typography>
         <div className="experience__block">

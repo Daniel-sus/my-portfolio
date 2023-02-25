@@ -139,7 +139,12 @@ const Projects = () => {
   return (
     <div className="wrapper">
       <div className="projects">
-        <Typography variant="h1" className="projects__title">
+        <Typography
+          variant="h1"
+          fontSize="50px"
+          fontWeight="800"
+          className="projects__title"
+        >
           {t("mpp")}
         </Typography>
         <div className="projects__block">
