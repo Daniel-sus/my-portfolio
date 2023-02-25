@@ -19,6 +19,8 @@ import ts from "../../assets/typescript.png";
 import si from "../../assets/socketio.png";
 import mobX from "../../assets/mobx.png";
 import { Typography } from "@mui/material";
+import { GitHub, VisibilityOutlined } from "@mui/icons-material";
+// import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
 const iconsArray1 = [reactIcon, javascriptIcon, reduxIcon, muiIcon];
 const iconsArray2 = [next, node, ts, si];
@@ -31,8 +33,8 @@ const projects = [
     title: "React pizza",
     imgUrl: pizzaImg,
     description: "",
-    linkToGitHub: "",
-    linkToSite: "",
+    linkToGitHub: "https://github.com/Daniel-sus/react-pizza-v2",
+    linkToSite: "https://daniel-sus.github.io/react-pizza-v2/",
     tech: iconsArray1,
   },
   {
@@ -47,7 +49,7 @@ const projects = [
     title: "React chess",
     imgUrl: chessImg,
     description: "",
-    linkToGitHub: "",
+    linkToGitHub: "https://github.com/Daniel-sus/react-chess",
     linkToSite: "",
     tech: iconsArray3,
   },
@@ -55,8 +57,8 @@ const projects = [
     title: "React sneakers",
     imgUrl: sneakersImg,
     description: "",
-    linkToGitHub: "",
-    linkToSite: "",
+    linkToGitHub: "https://github.com/Daniel-sus/react-shop",
+    linkToSite: "https://daniel-sus.github.io/react-shop/#/react-shop/",
     tech: iconsArray1,
   },
   {
@@ -71,16 +73,16 @@ const projects = [
     title: "Find GitHub user",
     imgUrl: findGitHubUserImg,
     description: "",
-    linkToGitHub: "",
-    linkToSite: "",
+    linkToGitHub: "https://github.com/Daniel-sus/React-find-git-user",
+    linkToSite: "https://daniel-sus.github.io/React-find-git-user/",
     tech: iconsArray3,
   },
   {
     title: "React todo",
     imgUrl: todoImg,
     description: "",
-    linkToGitHub: "",
-    linkToSite: "",
+    linkToGitHub: "https://github.com/Daniel-sus/TS-React-Reduxv",
+    linkToSite: "https://daniel-sus.github.io/TS-React-Redux/",
     tech: iconsArray1,
   },
   {
@@ -173,6 +175,44 @@ const Projects = () => {
                     alt="image"
                   />
                   <div className="overlay"></div>
+                  <motion.div
+                    whileHover={{ opacity: [0, 1] }}
+                    transition={{
+                      duration: 0.25,
+                      ease: "easeInOut",
+                      staggerChildren: 0.5,
+                    }}
+                    className="app__work-hover app__flex"
+                  >
+                    <a
+                      href={project.linkToSite}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <motion.div
+                        whileInView={{ scale: [0, 1] }}
+                        whileHover={{ scale: [1, 0.9] }}
+                        transition={{ duration: 0.25 }}
+                        className="app__flex"
+                      >
+                        <VisibilityOutlined />
+                      </motion.div>
+                    </a>
+                    <a
+                      href={project.linkToGitHub}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <motion.div
+                        whileInView={{ scale: [0, 1] }}
+                        whileHover={{ scale: [1, 0.9] }}
+                        transition={{ duration: 0.25 }}
+                        className="app__flex"
+                      >
+                        <GitHub />
+                      </motion.div>
+                    </a>
+                  </motion.div>
                 </div>
                 {/* <Typography variant="h5" className="project__tech__title">
                   tech:
