@@ -1,0 +1,14 @@
+.about {
+  padding-top: 160px;
+
+  &__title {
+    font-size: 80px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+}
